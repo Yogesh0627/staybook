@@ -1,8 +1,10 @@
+import { hotelDetailsValidation } from '@/inputValidations/hotelDataValidation'
 import { HotelInfoDetails } from '@/lib/HotelDetails'
 import Image from 'next/image'
 import React from 'react'
+import * as z  from 'zod'
 
-const SingleHotel = ({hotelData}:{hotelData:HotelInfoDetails}) => {
+const SingleHotel = ({hotelData}:{hotelData:z.infer<typeof hotelDetailsValidation>}) => {
   return (
     <div className='px-5 py-10 w-full'>
         <div className='flex flex-col md:flex-row w-full  flex-center gap-10'>
