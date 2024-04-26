@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Getting Started 
 
-## Getting Started
+## Technologies and libraries used
 
-First, run the development server:
+1. Next Js
+2. TypeScript
+3. Zod for input Validation
+4. React hook form
+5. Shad CN UI library
+6. Tailwind CSS
+7. Firebase SDK 
+8. Deployment done on Vercel
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# This application is hotel management form which let users to register hotels in their records and user can update the hotel details 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# thanks to zod it has input validation feature which validate the each and every input given by the user
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Thanks to typeScript it has type Safety 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# the project compelted with the help tailwind css and ShadCn UI
 
-## Learn More
+# React hoook form take care of the all form validation it takes the zod schema and validate all the inputs according to that
 
-To learn more about Next.js, take a look at the following resources:
+## Features
+1. Registration of new Hotels
+2. Updation of new hotels
+3. display all hotel as a list
+4. display a single hotel and all its information
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# For updating a hotel ==>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. just go to hotels section ==> click the hotel you want to update ==> click on the top right side document ==> than update details
 
-## Deploy on Vercel
+2. for register ==> just go to new registration and fill all the details and submit
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# this application has typeSafety and has scalibitliy for better working this application have error handling also type safety 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# deployement is done on vercel as it's very best suitable for next js projects
