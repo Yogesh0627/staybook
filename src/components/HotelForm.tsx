@@ -17,12 +17,10 @@ import {
 } from "./ui/form";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
-import Formfield from "./Formfield";
 import { Loader2 } from "lucide-react";
-import { Hotels } from "@/firebase/config";
-import { addHotel } from "@/helper/addHotel";
 import checkHotelExists from "@/helper/checkHotelExisting";
 import { Textarea } from "./ui/textarea";
+import { addHotel } from "@/helper/addHotel";
 const HotelForm = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -51,19 +49,15 @@ const HotelForm = () => {
   
   const onSubmit=async (data:z.infer<typeof hotelDetailsValidation>)=>{
 
-    // checking existence is pending has to be donw for tomorrow urgent
     try {
-        console.log(data)
         setIsSubmitting(true)
         const ifExist = await checkHotelExists(data.hotelEmailId);
-        console.log(ifExist[0]?.hotelEmailId)
          if(ifExist[0]){
             toast({
                 title:"Hotel Already Exist thus can not add it again",
                 description:"This Hotel Already Exist however if you want to update the data than please go in edit and update section"
             })
             setIsSubmitting(false)
-            // form.reset()
             return
         }
           

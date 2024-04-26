@@ -17,13 +17,11 @@ import {
 } from "./ui/form";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
-import Formfield from "./Formfield";
+
 import { Loader2, X } from "lucide-react";
-import { Hotels } from "@/firebase/config";
-import { addHotel } from "@/helper/addHotel";
-import checkHotelExists from "@/helper/checkHotelExisting";
+
+
 import { updateHotelDetails } from "@/helper/updateHotel";
-import { HotelInfoDetails } from "@/lib/HotelDetails";
 import { Textarea } from "./ui/textarea";
 
 interface UpdateFormProps{
@@ -48,19 +46,14 @@ const UpdateForm = ({formData,editFalse,id,handleUpdate}:UpdateFormProps) => {
 
     try {
         setIsUpdating(true)
-        console.log(formData)
         const response = await updateHotelDetails(id,data)
-
-        console.log("response after updating ",response)
         setIsUpdating(false)
         handleUpdate(data)
-        // editFalse(false)
         toast({title:"Successfully Updated Hotel",
             description:`Hotel details updated `,
         })
         
         form.reset(data)
-        // router.replace(`/hotels/${id}`)
         return
         }
           

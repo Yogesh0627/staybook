@@ -5,10 +5,14 @@ import { z } from "zod"
 
 export const updateHotelDetails = async (id:string,newDetails:z.infer<typeof hotelDetailsValidation>)=>{
 
-    console.log(id)
-    // console.log("inside update")
-    const updatedDetails = doc(db,"HotelDataBase",id)
-    const response = await updateDoc(updatedDetails,newDetails)
-    console.log(response)
-    return response
+  
+
+    try {
+        const updatedDetails = doc(db,"HotelDataBase",id)
+        const response = await updateDoc(updatedDetails,newDetails)
+    
+        return response
+    } catch (error) {
+        return "something went wrong "
+    }
 }
