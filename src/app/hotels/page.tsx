@@ -17,7 +17,8 @@ const AllHotels = () => {
       const hotelsData = snapshot.docs.map((doc) => ({
         ...doc.data(),
         id: doc.id,
-      }));
+      })); 
+      // ignoring ts error as it is not accepting id in hotels so additionally adding it
       //@ts-ignore
       setHotels(hotelsData);
     } catch (error) {
