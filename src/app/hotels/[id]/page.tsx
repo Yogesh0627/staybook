@@ -61,6 +61,7 @@ const handleUpdate = (updatedData:any)=>{
 
 useEffect(()=>{
   getHotel(id)
+// eslint-disable-next-line react-hooks/exhaustive-deps
 },[id])
 
 // console.log(hotelData)

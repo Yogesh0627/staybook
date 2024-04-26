@@ -18,7 +18,7 @@ const AllHotels = () => {
         ...doc.data(),
         id: doc.id,
       }));
-
+      //@ts-ignore
       setHotels(hotelsData);
     } catch (error) {
       console.error("Error fetching hotels:", error);

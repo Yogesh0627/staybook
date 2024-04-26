@@ -1,8 +1,21 @@
+/* eslint-disable @next/next/no-img-element */
 import { HotelInfoDetails } from '@/lib/HotelDetails'
-import Image from 'next/image'
-import React from 'react'
+import { z } from 'zod'
 
-const Card = ({hotelName,hotelAddress,hotelLandmark,hotelImageUrl,hotelStartingPrice,hotelCity,hotelState,hotelStarRating,hotelPincode,hotelCty}:HotelInfoDetails) => {
+
+interface CardProps{
+    hotelName:string,
+    hotelAddress:string,
+    hotelLandmark:string,
+    hotelCity :string,
+    hotelImageUrl :string,
+    hotelStartingPrice:number,
+    hotelState:string,
+    hotelStarRating:number,
+    hotelPincode:string
+
+}
+const Card = ({hotelName,hotelAddress,hotelLandmark,hotelImageUrl,hotelStartingPrice,hotelCity,hotelState,hotelStarRating,hotelPincode}:CardProps) => {
   return (
     <div className='flex mt-10 flex-col  w-full md:flex-row shadow-xl p-4'>
         <div className='w-full md:w-96 rounded-xl '>

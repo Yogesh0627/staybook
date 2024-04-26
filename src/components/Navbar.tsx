@@ -30,100 +30,6 @@ const Navbar = () => {
   };
 
   return (
-    // <div className="px-10 w-full py-3 bg-[#005250]">
-    //   <div className="flex justify-between items-center">
-    //     <div className="">
-    //       <Link href={'/'}>
-    //       <Image
-    //         src={`/brand_logo.svg`}
-    //         width={1000}
-    //         height={1000}
-    //         className="w-12 h-12"
-    //         alt="staybook logo"
-          
-    //       />
-    //       </Link>
-    //     </div>
-    //     <div className="flex gap-10 text-white text-lg">{NavLinks}</div>
-    //   </div>
-    // </div>
-
-  //   <div className="px-10 w-full py-3 bg-[#005250]">
-  //   <div className="flex justify-between items-center">
-  //     <div>
-  //       <Link href="/">
-  //         <Image
-  //           src="/brand_logo.svg"
-  //           width={40}
-  //           height={40}
-  //           className="w-12 h-12"
-  //           alt="staybook logo"
-  //         />
-  //       </Link>
-  //     </div>
-  //     <div className="sm:hidden">
-  //       <button
-  //         onClick={toggleMenu}
-  //         className="text-white text-xl focus:outline-none"
-  //         aria-label="Toggle Menu"
-  //       >
-  //         ☰
-  //       </button>
-  //     </div>
-  //     <div className={`fixed top-0 right-0 bg-[#005250] p-4 transition-all duration-300 ease-in-out ${isMenuOpen ? 'w-60' : 'w-0'} sm:w-auto sm:flex sm:flex-col sm:static sm:w-full`}>
-  //       {isMenuOpen && (
-  //         <div className="flex flex-col gap-4">
-  //           <button
-  //             onClick={closeMenu}
-  //             className="text-white text-xl focus:outline-none self-end"
-  //           >
-  //             ✕
-  //           </button>
-  //           {NavLinks}
-  //         </div>
-  //       )}
-  //     </div>
-  //   </div>
-  // </div>
-  
-//   <div className="px-10 w-full py-3 bg-[#005250]">
-//   <div className="flex justify-between items-center">
-//     <div>
-//       <Link href="/">
-//         <Image
-//           src="/brand_logo.svg"
-//           width={40}
-//           height={40}
-//           className="w-12 h-12"
-//           alt="staybook logo"
-//         />
-//       </Link>
-//     </div>
-//     <div className="hidden border-2 border-red-500 md:flex gap-10 text-white text-lg">{NavLinks}</div>
-//     <div className="sm:hidden w-fit">
-//       <button
-//         onClick={toggleMenu}
-//         className="text-white text-xl focus:outline-none"
-//         aria-label="Toggle Menu"
-//       >
-//         ☰
-//       </button>
-//     </div>
-//     <div className={`fixed top-0 right-0 bg-[#005250] p-4 transition-all duration-300 ease-in-out ${isMenuOpen ? 'w-60' : 'w-0'} sm:w-auto sm:flex sm:flex-col sm:static sm:w-full`}>
-//       {isMenuOpen && (
-//         <div className="flex flex-col gap-4">
-//           <button
-//             onClick={closeMenu}
-//             className="text-white text-xl focus:outline-none self-end"
-//           >
-//             ✕
-//           </button>
-//           {NavLinks}
-//         </div>
-//       )}
-//     </div>
-//   </div>
-// </div>
  <div className="px-10 w-full py-3 bg-[#005250]">
 <div className="flex  justify-between items-center">
   <div>
@@ -147,7 +53,7 @@ const Navbar = () => {
       ☰
     </button>
   </div>
-  <div className={`md:hidden fixed top-0 right-0  bg-[#005250] p-4 transition-all duration-300 ease-in-out ${isMenuOpen ? 'w-60' : 'w-0'} sm:w-auto sm:flex sm:flex-col sm:static sm:w-full`}>
+  <div className={`md:hidden fixed top-0 right-0  bg-[#005250] p-4 transition-all duration-300 ease-in-out ${isMenuOpen ? 'w-60' : 'w-0'} sm:flex sm:flex-col sm:static sm:w-full`}>
     {isMenuOpen && (
       <div className="flex flex-col gap-4">
         <button
