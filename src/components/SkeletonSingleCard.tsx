@@ -2,25 +2,26 @@ import React from 'react';
 
 const SkeletonSingleHotel = () => {
     return (
-        <div className='px-5 py-10'>
-            <div className='flex flex-center gap-10'>
-                <div className='max-w-2xl h-96 w-96 rounded-lg bg-gray-200 animate-pulse'></div>
+        <div className='px-5 py-10 w-full'>
+            <div className='flex flex-col md:flex-row w-full  flex-center gap-10'>
+                <div className='w-full h-56 md:h-96 md:w-2/5 rounded-lg bg-gray-200 animate-pulse'></div>
 
-                <div>
-                    <div>
-                        <h1 className='text-6xl font-bold bg-gray-200 animate-pulse h-16 w-96 mb-4'></h1>
-                        <div className='flex justify-center items-center space-x-10'>
+                <div className='w-full md:w-3/5'>
+                    <div className='w-full '>
+                        <h1 className='text-6xl font-bold bg-gray-200 animate-pulse h-16 w-full mb-4'></h1>
+                        <div className='flex flex-col  md:flex-row  items-center gap-6 mt-3'>
                             <p className='text-xl font-medium bg-gray-200 animate-pulse h-8 w-96'></p>
                             <p className='bg-gray-200 animate-pulse h-8 w-96'></p>
                         </div>
                     </div>
-                    <div className='mt-16 text-xl font-normal flex justify-between items-center'>
-                        <p className='bg-gray-200 animate-pulse h-12 w-full'></p>
-                        <p className='bg-gray-200 animate-pulse h-12 w-24'></p>
+                    <div className='mt-16 w-full  text-xl font-normal flex justify-between items-center'>
+                        <p className='bg-gray-200 animate-pulse h-28 md:h-40 w-full'></p>
                     </div>
 
-                    <div className='mt-20'>
+                    <div className='mt-20 flex flex-col space-y-5 md:flex-row md:items-center md:space-x-8'>
                         <p className='text-4xl font-semibold bg-gray-200 animate-pulse h-12 w-48'></p>
+                        <p className='bg-gray-200 animate-pulse h-6 w-24'></p>
+
                     </div>
                 </div>
             </div>
