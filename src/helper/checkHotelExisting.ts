@@ -1,5 +1,5 @@
 import { Hotels } from "@/firebase/config";
-import { query, where, onSnapshot, getDocs } from "firebase/firestore";
+import { query, where, getDocs } from "firebase/firestore";
 
 const checkHotelExists = async (email: string) => {
     

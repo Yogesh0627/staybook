@@ -26,6 +26,7 @@
 2. Updation of new hotels
 3. display all hotel as a list
 4. display a single hotel and all its information
+5. Delete feature added now user can delete hotel also
 
 # For updating a hotel ==>
 
