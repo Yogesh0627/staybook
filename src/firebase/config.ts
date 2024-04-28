@@ -20,7 +20,5 @@ export const db = getFirestore()
 
 export const Hotels = collection(db,"HotelDataBase")
 
-// queries 
 
-// const q = query(Hotels,where("hotelEmailId","hotelEmailId"))
 export default firebaseConfig

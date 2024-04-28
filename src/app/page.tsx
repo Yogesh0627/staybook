@@ -1,8 +1,4 @@
-"use client";
-import Navbar from "@/components/Navbar";
 import Wrapper from "@/components/wrapper";
-import { db } from "@/firebase/config";
-import { ref, set } from "firebase/database";
 import Image from "next/image";
 
 export default function Home() {

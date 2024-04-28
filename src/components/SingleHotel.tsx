@@ -7,7 +7,7 @@ import * as z  from 'zod'
 
 const SingleHotel = ({hotelData}:{hotelData:z.infer<typeof hotelDetailsValidation>}) => {
   return (
-    <div className='px-5 py-10 w-full'>
+    <div className='px-5 py-10 w-full '>
         <div className='flex flex-col md:flex-row w-full  flex-center gap-10'>
             <div className='w-full md:w-2/5 h-fit rounded-lg object-cover'>
                 {/* <Image src={hotelData.hotelImageUrl}

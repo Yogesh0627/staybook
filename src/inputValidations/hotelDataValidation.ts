@@ -1,8 +1,14 @@
+
 import * as z from "zod"
 
+export const hotelImageListSchema = z.object({
+  imageId:z.string(),
+  imageUrl: z.string().url(),
+  imageTitle: z.string()
+})
 
 export const hotelDetailsValidation =   z.object({
-
+    id:z.string().optional(),
     hotelName: z.string().min(1, 'Hotel name is required').toLowerCase().trim(),
     hotelEmailId: z.string().email('Email address is required').min(6, 'Email is required').toLowerCase().trim(),
     hotelContactNumber: z.number().min(1, 'Contact number is required').max(9999999999 , 'Contact Number should be max 10 numbers'),
@@ -17,6 +23,25 @@ export const hotelDetailsValidation =   z.object({
     hotelCountry: z.string().min(1, 'Country is required').toLowerCase().trim(),
     hotelRegion: z.string().min(1, 'Region is required').toLowerCase().trim(),
     hotelPincode: z.string().length(6,"Pincode should be six digits").trim(),
+    hotelSlugDetails:z.object({
+      hotel: z.string().min(1, 'Hotel name is required').toLowerCase().trim(),
+      hotelCity: z.string().min(1, 'City is required').toLowerCase().trim(),
+      hotelRegion: z.string().min(1, 'Region is required').toLowerCase().trim(),
+      hotelState: z.string().min(1, 'State is required').toLowerCase().trim(),
+      hotelCountry: z.string().min(1, 'Country is required').toLowerCase().trim(),
+    }),
+    hotelLongitude: z.string().min(1,"Longitude Cordinates required").regex(/^[^a-zA-Z!@#$%^&*()_+={}[\]|\\;:'",<>/?`~]*$/,"Longitude should be required"),
+    hotelLatitude: z.string().min(1,"Longitude Cordinates required").regex(/^[^a-zA-Z!@#$%^&*()_+={}[\]|\\;:'",<>/?`~]*$/,"Latitude should be required"),
+    hotelMapUrl : z.string().url("URL can not be empty"),
+    
+    hotelPaymentOptions:z.object({
+      postpaidPayment: z.boolean().default(false),
+      prepaidPayment: z.boolean().default(false),
+      partialPayment: z.boolean().default(false),
+    }),
+    
+    hotelImageList : z.array(hotelImageListSchema)
   });
 
     
+export type hotelValidations = z.infer<typeof hotelDetailsValidation>

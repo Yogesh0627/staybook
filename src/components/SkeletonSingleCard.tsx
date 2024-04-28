@@ -8,18 +8,18 @@ const SkeletonSingleHotel = () => {
 
                 <div className='w-full md:w-3/5'>
                     <div className='w-full '>
-                        <h1 className='text-6xl font-bold bg-gray-200 animate-pulse h-16 w-full mb-4'></h1>
+                        <h1 className=' font-bold bg-gray-200 animate-pulse h-16 w-full mb-4'></h1>
                         <div className='flex flex-col  md:flex-row  items-center gap-6 mt-3'>
-                            <p className='text-xl font-medium bg-gray-200 animate-pulse h-8 w-96'></p>
+                            <p className=' bg-gray-200 animate-pulse h-8 w-96'></p>
                             <p className='bg-gray-200 animate-pulse h-8 w-96'></p>
                         </div>
                     </div>
-                    <div className='mt-16 w-full  text-xl font-normal flex justify-between items-center'>
+                    <div className='mt-16 w-full  flex justify-between items-center'>
                         <p className='bg-gray-200 animate-pulse h-28 md:h-40 w-full'></p>
                     </div>
 
                     <div className='mt-20 flex flex-col space-y-5 md:flex-row md:items-center md:space-x-8'>
-                        <p className='text-4xl font-semibold bg-gray-200 animate-pulse h-12 w-48'></p>
+                        <p className=' bg-gray-200 animate-pulse h-12 w-48'></p>
                         <p className='bg-gray-200 animate-pulse h-6 w-24'></p>
 
                     </div>

@@ -1,6 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { HotelInfoDetails } from '@/lib/HotelDetails'
-import { z } from 'zod'
 
 
 interface CardProps{
@@ -44,7 +42,7 @@ const Card = ({hotelName,hotelAddress,hotelLandmark,hotelImageUrl,hotelStartingP
                     </div>
                 <div className='md:flex md:flex-row-reverse'>
                     <div className='flex  mt-4 gap-4 '>
-                        <div className='bg-[#FFEFD7] font-bold text-[#EEBB6F] rounded-2xl px-4 py-1 text-sm w-fit flex items-center'><p>30 % off</p></div>
+                        <div className='bg-[#FFEFD7] font-bold text-[#EEBB6F] rounded-2xl px-2 py-1 text-sm w-fit flex items-center'><p>30 % off</p></div>
                         <div className='font-medium text-2xl'>₹{" "}{hotelStartingPrice}</div>
                     </div>
                 </div>

@@ -40,6 +40,7 @@ const Navbar = () => {
         height={1000}
         className="w-16 h-16"
         alt="staybook logo"
+        priority
       />
     </Link>
   </div>
