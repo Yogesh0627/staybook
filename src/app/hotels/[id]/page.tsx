@@ -12,7 +12,7 @@ import { FilePenLine } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 
-export const initialState ={
+ const initialState ={
   id:"",
   hotelName: "",
   hotelEmailId: "",
