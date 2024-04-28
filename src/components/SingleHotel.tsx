@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { hotelDetailsValidation } from '@/inputValidations/hotelDataValidation'
-import { HotelInfoDetails } from '@/lib/HotelDetails'
 import Image from 'next/image'
 import React from 'react'
 import * as z  from 'zod'

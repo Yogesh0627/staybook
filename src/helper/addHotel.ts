@@ -5,7 +5,7 @@ import * as z from 'zod'
 
 
 
-// Function to add a new hotel to Firestore
+
 export const addHotel = async (data:z.infer<typeof hotelDetailsValidation>) => {
   try {
 
