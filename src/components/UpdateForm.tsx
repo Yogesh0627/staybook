@@ -40,7 +40,6 @@ const UpdateForm = ({
   const [isUpdating, setIsUpdating] = useState(false);
   const { toast } = useToast();
 
-  const [formStep, setformStep] = useState<number>(0);
 
   const form = useForm<z.infer<typeof hotelDetailsValidation>>({
     resolver: zodResolver(hotelDetailsValidation),
@@ -101,8 +100,8 @@ const UpdateForm = ({
           </div>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-              <div className="flex  flex-col">
-                <div className={`${formStep===0? "visible":"hidden"} flex flex-col gap-6`}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+
                   <FormField
                     control={form.control}
                     name="hotelName"
@@ -159,9 +158,7 @@ const UpdateForm = ({
                           <FormMessage />
                         </FormItem>
                       )} />
-                </div>
 
-                <div className={`${formStep===1? "visible":"hidden"} flex flex-col gap-6`}>
                   <FormField
                     control={form.control}
                     name="hotelAddress"
@@ -297,9 +294,8 @@ const UpdateForm = ({
                       </FormItem>
                     )}
                   />
-                </div>
 
-                <div className={`${formStep===2? "visible":"hidden"} flex flex-col gap-6`}>
+
                   <FormField
                     control={form.control}
                     name="hotelStartingPrice"
@@ -373,10 +369,9 @@ const UpdateForm = ({
                       </FormItem>
                     )}
                   />
-                </div>
 
 
-                <div className={`${formStep===2? "visible":"hidden"} mt-10`}>
+                <div className={` mt-10`}>
                   <div className="mb-5 text-lg font-medium">* Please update the payment options hotel accept.</div>
 
                   <FormField
@@ -441,7 +436,7 @@ const UpdateForm = ({
                   />
                 </div>
                 
-                <div className={`${formStep===3? "visible":"hidden"} flex flex-col gap-y-6`}>
+
                   <FormField
                     control={form.control}
                     name="hotelLatitude"
@@ -521,9 +516,7 @@ const UpdateForm = ({
                       </FormItem>
                     )}
                   />
-                </div>
                 
-                <div className={`${formStep===3? "visible":"hidden"}  space-y-6 mt-10`}>
                   <FormField
                     control={form.control}
                     name="hotelImageUrl"
@@ -640,23 +633,13 @@ const UpdateForm = ({
                     Add Image
                   </button>
                 </div>
-              </div>
 
-              <div className="flex flex-col  w-fit md:flex md:flex-row md:text-center gap-5 ">
-                <Button
-                  type="button"
-                  disabled={formStep === 0}
-                  className={` text-xl ${formStep === 0 && "hidden"}`}
-                  onClick={() => setformStep((prev) => prev - 1)}
-                >
-                  
-                  <ArrowLeft className=" mr-2 w-6 h-6" />
-                  Previous Step
-                </Button>
+              <div className="flex flex-col  w-full  md:flex-row md:justify-center md:items-center md:text-center gap-5 ">
+
                 <Button
                   type="submit"
                   disabled={isUpdating}
-                  className={`w-fit text-xl ${formStep !== 3 && "hidden"}`}
+                  className={`w-fit text-xl`}
                 >
                   {isUpdating ? (
                     <>
@@ -666,15 +649,6 @@ const UpdateForm = ({
                   ) : (
                     "Update"
                   )}
-                </Button>
-
-                <Button
-                  type="button"
-                  disabled={formStep === 3}
-                  className={`w-fit text-xl ${formStep === 3 && "hidden"}`}
-                  onClick={() => setformStep((prev) => prev + 1)}
-                >
-                  Next Step <ArrowRight className="w-6 h-6 ml-2" />
                 </Button>
               </div>
             </form>
